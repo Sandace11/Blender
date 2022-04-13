@@ -1,0 +1,16 @@
+# Blender script to make textures look blocky.
+# Author: Ohanno_Forgotten-Knight
+#
+# See instructions, end of step #9, for how to run this script:
+# http://www.realtimerendering.com/erich/minecraft/public/mineways/mineways.html#blender
+#
+# Blender documentation is here: https://docs.blender.org/api/current/bpy.types.ShaderNodeTexImage.html
+
+import bpy
+
+for mat in bpy.data.materials:
+    if not mat.node_tree:
+        continue
+    for node in mat.node_tree.nodes:
+        if node.type == 'TEX_IMAGE':
+            node.interpolation = 'Closest'

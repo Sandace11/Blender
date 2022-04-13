@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
+	<link rel="icon" href="icon.ico" type="image/x-icon" />
+	<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="script.js"></script>
+	<title>Mineways Textures</title>
+</head>
+<body>
+<div id="wrapper">
+	<div id="mineways-header-image">
+		<a href="community.html">
+		<img src="images/mineways_header.jpg" alt="Header image" width="787" height="125" />
+		</a>
+	</div>
+
+	<div id='cssmenu'>
+	<ul>
+		<li><a href="index.html"><span>Home</span></a></li>
+		<li class='has-sub'><a href="downloads.html"><span>Quickstart</span></a>
+			<ul>
+				<li><a href="downloads.html#downloadImgs">Downloads</a></li>
+				<li><a href="downloads.html#instructions">Quick Instructions</a></li>
+				<li><a href="downloads.html#referenceHelp">Reference Help</a></li>
+				<li><a href="downloads.html#windowsPlatformHelp">Windows Help</a></li>
+				<li><a href="downloads.html#macPlatformHelp">Mac Help</a></li>
+				<li><a href="downloads.html#linuxPlatformHelp">Linux Help</a></li>
+				<li><a href="downloads.html#generalTrouble">General Troubleshooting</a></li>
+				<li><a href="downloads.html#knownBugs">Known Bugs</a></li>
+				<li><a href="downloads.html#howToPrint">How To 3D Print</a></li>
+			</ul>
+		</li>
+		<li class='has-sub'><a href="mineways.html"><span>Documentation</span></a>
+			<ul>
+				<li><a href="mineways.html"><span>Full page</span></a></li>
+				<li class='active'><a href="textures.html"><span>Textures</span></a></li>
+				<li><a href="reference.html"><span>Quick Reference</span></a></li>
+				<li><a href="downloads.html#troubleshooting"><span>Troubleshooting</span></a></li>
+				<li><a href="mineways.html#rendering"><span>Rendering Tips</span></a></li>
+				<li><a href="http://www.youtube.com/playlist?list=PL3AE7AB94E9114715&feature=mh_lolz"><span>Videos</span></a></li>
+				<li><a href="scripting.html"><span>Scripting</span></a></li>
+				<li><a href="mineways.html#versions"><span>Versions</span></a></li>
+				<li class='last'><a href="https://github.com/erich666/Mineways"><span>Source Code</span></a></li>
+			</ul>
+		</li>
+		<li class='has-sub'><a href="community.html"><span>Galleries</span></a>
+			<ul>
+				<li><a href="community.html"><span>Showcase</span></a></li>
+				<li><a href='http://www.flickr.com/groups/mineways/pool/'><span>Flickr</span></a></li>
+				<li><a href='https://www.google.com/search?q=mineways&newwindow=1&source=lnms&tbm=isch'><span>Google Images</span></a></li>
+				<li><a href='https://www.shapeways.com/search?q=mineways'><span>Shapeways</span></a></li>
+				<li><a href='http://www.sculpteo.com/en/gallery/today/?search=mineways'><span>Sculpteo</span></a></li>
+				<li class='last'><a href='https://sketchfab.com/tags/minecraft'><span>Sketchfab</span></a></li>
+			</ul>
+		</li>
+		<li class='has-sub'><a href="http://www.reddit.com/r/mineways/"><span>Community</span></a>
+			<ul>
+				<li><a href="http://www.reddit.com/r/mineways/"><span>Reddit</span></a></li>
+				<li><a href="https://discord.gg/wfayQA6Dyc"><span>Discord</span></a></li>
+				<li><a href="https://www.minecraftforum.net/forums/minecraft-java-edition/discussion/326119-mineways-3d-prints-of-minecraft-objects?page=100"><span>Minecraft Forum</span></a></li>
+				<li><a href="https://groups.google.com/forum/#!forum/mineways"><span>Google Group</span></a></li>
+				<li class='last'><a href="https://github.com/erich666/Mineways/issues"><span>Issues on Github</span></a></li>			</ul>
+		</li>
+		<li class='last'><a href="contact.html"><span>Contact</span></a></li>
+	</ul>
+	</div>
+	
+	<div id="content" class="clearfix">
+<h1>Using Textures in Mineways</h1>
+
+You can apply <a href="https://minecraft.gamepedia.com/Resource_Pack">resource packs</a> that modders have developed to models you export from Mineways. To select a terrain file, use "Open | Choose Terrain File" or "Open Terrain File" and pick a PNG of the form "terrainExt_*.png". Read more about this program feature (and how to set a default terrain file on startup) <a href="mineways.html#texture_output">here</a>. If you want to make your own terrain file(s) from some resource pack, <a href="#own_terrain">start here</a>.
+
+<H2>Pre-Built Terrain Files</H2>
+
+The larger <a href="http://mineways.com">Mineways download</a> comes with the following five terrain files, plus one physically based terrain file set. The physically based material renderings were done with the free <a href="mineways.html#ovcreate">Omniverse Create</a> program.
+
+<div class="inliner">
+  <p>Here are some of the terrain file sets downloadable (with permission from their creators) for use with Mineways, displayed with 
+  <a href="#g3d">G3D</a>. Note that some tiles in these resource packs may be missing or distorted in the terrainExt*.png files that come with Mineways, due to differing naming conventions and texture layouts.</p>
+  <p>Click on an image for the larger version.</p>
+</div>
+<div id="texturePacks">
+  <div class="textureBox">
+    <a href="images/zen_default.jpg">
+    <img src="images/thumb_zen_default.jpg" alt="default textures"></a>
+    <span> Default Minecraft textures</span><span>&nbsp;</span>
+	<b><a href="https://sketchfab.com/models/53f7adafaca44a5b8ef1692a47fa03ac">View on Sketchfab</a></b>
+  </div>
+  <div class="textureBox">
+    <a href="images/zen_coterie_craft.jpg">
+    <img src="images/thumb_zen_coterie_craft.jpg" alt="Coterie Craft"></a>
+    <a href="https://resourcepack.net/coterie-craft-resource-pack/">Coterie Craft</a><span>by Cpt. Corn</span>
+	<b><a href="https://sketchfab.com/models/fa71f250ca53407ea443ae03fbef8ba3">View on Sketchfab</a></b>
+  </div>
+  <div class="textureBox">
+    <a href="images/zen_dokucraft_high.jpg">
+    <img src="images/thumb_zen_dokucraft_high.jpg" alt="Dokucraft High"></a>
+    <a href="https://dokucraft.co.uk/">DokuCraft High</a><span>by Hickerydickery</span>
+	<b><a href="https://skfb.ly/QsDZ">View on Sketchfab</a></b>
+  </div>
+  <div class="textureBox">
+    <a href="images/zen_dokucraft_light.jpg">
+    <img src="images/thumb_zen_dokucraft_light.jpg" alt="Dokucraft Light"></a>
+    <a href="https://dokucraft.co.uk/">DokuCraft Light</a><span>by Hickerydickery</span>
+	<b><a href="https://skfb.ly/QsEH">View on Sketchfab</a></b>
+  </div>
+  <div class="textureBox">
+    <a href="images/zen_sphax_pure_bd_craft.jpg">
+    <img src="images/thumb_zen_sphax_pure_bd_craft.jpg" alt="Sphax pure BD Craft"></a>
+    <a href="http://bdcraft.net/purebdcraft-minecraft">Sphax PureBDCraft</a>
+    <span>by Sphax84</span>
+	<b><a href="https://skfb.ly/Q8rU">View on Sketchfab</a></b>
+  </div>
+</div>
+<P>
+A few physically based material terrain file sets are also included: JG-RTX, LunaHD, and Smoolistic.
+
+<h3><a href="https://github.com/jasonjgardner/jg-rtx/releases">JG RTX</a></h3>
+Provided at two resolutions. Released under Creative Commons. The version with Mineways is the core resource pack. I have a few shots using it <a href="https://photos.app.goo.gl/gSzLeFGAN5rrfjER7">here</a>.
+<P>
+Here's an example of the core pack, rendered using the free <a href="mineways.html#ovcreate">Omniverse Create</a> program:
+<P>
+<div>
+   <a id="jgrtx"><img src="images/jgrtx_pbr.jpg" alt="JG RTX"></a>
+</div>
+
+<h3><a href="http://lunahd.com">LunaHD</a></h3>
+The LunaHD developer provides this free low-res 32x32 version his work. With his permission, we made this terrain file set. When used with USDA export, I recommend turning off the "Custom Material" setting (having this setting on gives the default blocky Minecraft look). See the <a href="http://lunahd.com">LunaHD</a> site for details on getting higher resolution versions of these textures, which can then be used within Mineways by substituting them into the USDA output textures directory, or by making your own terrainExt set of files.
+<P>
+Some of <a href="http://lunahd.com">LunaHD</a> shown alongside some unmodified classic Minecraft textures:
+<P>
+<div>
+   <a id="lunahd"><img src="images/lunahd_pbr.jpg" alt="LunaHD"></a>
+</div>
+
+<h3><a href="https://www.reddit.com/r/minecraftRTX/comments/kg55wg/smoolistic_updated_to_116210/">Smoolistic</a></h3>
+A toon-like resource pack with normal maps and physically based material textures. Made available with permission of the author. Latest known version is <a href="https://www.reddit.com/r/minecraftRTX/comments/kg55wg/smoolistic_updated_to_116210/">here</a>.
+<P>
+A sample of <a href="https://www.reddit.com/r/minecraftRTX/comments/kg55wg/smoolistic_updated_to_116210/">Smoolistic</a>, alongside some unmodified classic Minecraft textures:
+<P>
+<div>
+   <a id="lunahd"><img src="images/smoolistic_pbr.jpg" alt="Smoolistic"></a>
+</div>
+
+
+<h2 id="dl">Additional Terrain File Downloads</h2>
+
+So as to not bloat the Mineways distribution too much, we've put more pre-made terrain files for download here. These currently include special purpose default terrain files, and potentially other <a href="https://minecraft.gamepedia.com/Resource_Pack">resource packs</a> converted to Mineways terrain files. Download, unzip if needed, and put the files into the same directory as your mineways.exe program.
+
+<P>
+<b>Specialized files (you will need to right click and select "Save link as..."):</b> The <b><a href="http://erich.realtimerendering.com/minecraft/public/mineways/downloads/terrainExt1024.png">terrainExt1024.png</a></b> and <b><a href="http://erich.realtimerendering.com/minecraft/public/mineways/downloads/terrainExt8192.png">terrainExt8192.png</a></b> files can be used to make the default Minecraft textures look sharp and pixel-like, in renderer that do not support "nearest neighbor" filtering. See <a href="mineways.html#blurry">here</a> for more information. If you don't know what I'm talking about, you likely don't need these.
+
+
+<H2 id="own_terrain">Creating Your Own Terrain Files</H2>
+
+Don't like reading? <B><a href="https://youtu.be/RpN1grOLocg">Here's a video</a></B> showing how to most easily use ChannelMixer and TileMaker to make your own terrain file(s) and how to then use it.
+
+<P>
+You can go farther, though, and use your own favorite resource pack to models you export. You can even add special "physically based" resources, such as surface normal textures for bumpiness, as well as roughness, metallic, and emissive (light) textures. These can then be used by any program that supports them. As a first step, Mineways supports export to the Pixar USD format that can be directly read into the <a href="mineways.html#ovcreate">Omniverse Create</a> program.
+
+<P>
+In a perfect world, you would just point Mineways at a resource pack (also once known as a texture pack). Mineways would then apply the textures in that pack to the models you export. If it didn't find a new texture in the resource pack, it would get the basic Minecraft texture instead and use that.
+
+<P>
+Alas, life is not perfect. One problem is that mod makers use non-standard names for block face tiles, sometimes even making spelling errors. Untangling exactly the intent of the thousands of resource packs out there is tough to automate, and difficult to understand where things are going wrong.
+
+<P>
+Instead, Mineways relies on a single, giant texture (the "terrain file") that contains all the block face textures ("tiles"). This single "terrain file" image has roots in the early design of Minecraft itself, which used to use the same exact single texture. Minecraft now uses a separate texture tile for each block face; Mineways has kept with the single, giant texture of doom for input, but can output separate textures by using the "Export individual textures" option.
+
+<P>
+This terrain file that Mineways reads has some advantages, such as being a single PNG image vs. a giant set of individual texture images. By looking at one image, and knowing where to look, you can see all the textures Mineways will use. (Where to look? <a href="https://github.com/erich666/Mineways/blob/master/Win/tiles.h#L77">Here</a>. All the tiles are listed by their column and row positions, e.g., gravel is at column 3, row 1 of the terrain image, starting counting from the upper left as 0,0.)
+
+<P>
+The single image file also guarantees that there is <i>some</i> tile image available for every Minecraft block face. For example, if a resource pack does not have a replacement for a sea lantern, then the terrain file will use the default Minecraft sea lantern tile.
+
+<h2>Making Terrain Files</h2>
+<P>
+Making your own terrain file for Mineways takes only a few steps. You do have to know how to use <a href="https://www.computerhope.com/issues/chusedos.htm">the command line</a>, but that's not hard. Knowing how to create a <a href="https://www.windowscentral.com/how-create-and-run-batch-file-windows-10">batch file</a> is also useful and easy enough. A batch file can store and rerun your commands to Mineways' tools.
+
+<P>
+All set? <B><a href="https://youtu.be/RpN1grOLocg">Watch the video</a></B> for the process or follow the instructions below.
+
+<P>
+Here's the quickstart/refresher for the two ways to make a terrainExt image file of your own. One is to use just TileMaker. You put all the block textures you want into some directory, e.g., <I>your_block_directory</I> (putting the chest textures in the "chests" subdirectory) and then simply do in a <a href="https://www.computerhope.com/issues/chusedos.htm">command window</a> in the Mineways TileMaker subdirectory:
+
+<PRE>
+cd c:\temp\mineways\TileMaker
+TileMaker.exe -d your_block_directory -o terrainExtYours.png
+</PRE>
+Running it produces a <i>terrainExtYours.png</I> terrain file, which you can then use in Mineways. The program looks for terrainBase.png being in the same directory you are running from. If it's missing, you can copy the terrainExt.png from the directory above TileMaker's to this directory and rename it terrainBase.png (terrainBase.png and terrainExt.png are the same file).
+<P>
+If you would rather not have to hand-copy images, or are using physically-based textures (i.e., more than just colored textures), do the following process instead. Unzip your resource pack into a directory, e.g., <I>resource_pack_directory</I>, then:
+
+<PRE>
+ChannelMixer.exe -i resource_pack_directory -o your_block_directory
+TileMaker.exe -d your_block_directory -o terrainExtYours.png
+</PRE>
+
+That's it! Read over any warnings and decide how you want to fix them. For example, if ChannelMixer says it's not using a texture you think it should, you may need to rename your version so that the program will find it.
+
+<P>
+What follows are more detailed instructions, in case these didn't make sense or didn't work for you.
+
+<P>
+The general flow is:
+<OL>
+<LI>Download and unzip a resource pack to some directory.
+<LI>Point the ChannelMixer program at this resource-pack directory for input, and some other directory for output (we'll call this the "block-and-chest directory"). ChannelMixer copies over the relevant files to the output directory.
+<LI>Point the TileMaker program at the newly-filled block-and-chest directory and give a name for the terrain file to be created.
+</OL>
+
+<P>
+<div>
+  <img src="images/resource_flow.jpg" alt="Resource pack texture flow">
+</div>
+<P>
+
+
+<P>
+Put your terrainExt image file wherever mineways.exe is located and start Mineways up. You then can load the terrainExt_yourNameHere.png file you've created by using "File -> Choose Terrain File". You can even make it the default terrain you always use when starting up Mineways, <a href="mineways.html#default_terrain">as explained here</a>.
+
+<P>
+Why two separate processes? Because resource pack makers do all sorts of things, so along the way you may need to modify their input textures. ChannelMixer copies the textures Mineways cares about into a directory (and a "chests" subdirectory). TileMaker then puts all these tiles into a single terrain file (or a set of terrain files, if physically based materials are supported by the resource pack). Each program may issue warnings or errors when run, which is where you come in. You can blithely ignore these messages, or you can look them over and take corrective actions, such as renaming, resizing, or otherwise modifying the resource pack's textures. I recommend the free <a href="https://www.getpaint.net/">paint.net</a> program if you are just getting started, but any image manipulation tool you like is fine.
+
+<P>
+What TileMaker does by default is simple: it reads in the terrainBase.png file Mineways provides (or ../terrainExt.png, if terrainBase.png is not found), overlays it with any tiles in the "blocks" directory (replacing the originals), extracts the chests from the "chest" subdirectory, then writes out this new image as terrainExt.png. The "chest" subdirectory normally has three chest tiles, as available - ender.png, normal.png, and normal_double.png (or similar names) - to generate chest tiles.
+
+<P>
+Mineways' two tools work with both Minecraft Classic resource packs and with Minecraft Bedrock <a href="https://mcpedb.com/tag/mcpack/">MCPack files</a>. You can find resource packs on such sites as <a href="https://www.planetminecraft.com/texture-packs/">this</a>, <a href="https://www.curseforge.com/minecraft/texture-packs">this</a>, <a href="https://mcpedl.com/?s=PBR">this</a> (and also <a href="https://mcpedl.com/?s=RTX">this search</a> there), and <a href="https://resourcepack.net/">this</a>. Or <a href="https://www.google.com/search?q=minecraft+resource+packs">google around</a> for way too many more. Best ones? <a href="https://www.pcgamer.com/best-minecraft-texture-packs/">Here's what PC Gamer</a> thinks. Want to make your own PBR resource pack? <a href="https://www.planetminecraft.com/blog/how-to-convert-any-texture-pack-to-support-ray-tracing/">This post</a> gives some tools and steps for making normal maps, etc.
+
+
+<h3 id="channelmixer">ChannelMixer</h3>
+
+After downloading and unzipping whatever resource pack or MCPack you like, you then want to run ChannelMixer. As an example, I'll use the free (and quite nice) <a href="https://github.com/jasonjgardner/jg-rtx/releases">JG RTX</a> resource pack as an example. Go to <a href="https://github.com/jasonjgardner/jg-rtx/releases">the release page</a> and look at the latest release listed. It will say "Assets" underneath. Click that to open the list, then download the zip:
+
+<P>
+<div>
+  <img src="images/jgrtx_download.jpg" alt="downloading JG RTX">
+</div>
+<P>
+
+Unzip the jg-rtx-0.7.0-alpha.zip (or newer!) file somewhere, say "C:\temp" to keep it short and sweet. I'm using the 0.7.0-alpha version here as an example, since it shows off some common problems.
+
+<P>
+C:\Users\ehaines\Documents\_documents\Github\Mineways\docs\imagesYou should now see something like this:
+
+<P>
+<div>
+  <img src="images/jgrtx_directory.jpg" alt="unzipped JG RTX directory">
+</div>
+<P>
+
+Open a <a href="https://www.computerhope.com/issues/chusedos.htm">command window</a> by using "CMD" in the Windows search window. Then type as follows:
+
+<PRE>
+cd c:\temp
+C:\Users\ehaines\Documents\_documents\GitHub\Mineways\ChannelMixer\x64\Release\ChannelMixer.exe -i "jg-rtx-0.7.0-alpha" -o "jg-rtx-channelmixer"
+</PRE>
+
+The first line takes you to the c:\temp directory. The second line is insanely long, I know. The first part you'll have to modify - you're pointing at wherever your copy of ChannelMixer.exe is located. Which is wherever you unzipped Mineways, in the TileMaker directory. Much easier is to just copy everything in that directory - ChannelMixer.exe, TileMaker.exe, and terrainBase.png to your c:\temp directory. After doing that, this second line then becomes just:
+
+<PRE>
+cd c:\temp
+ChannelMixer.exe -i "jg-rtx-0.7.0-alpha" -o "jg-rtx-channelmixer"
+</PRE>
+
+and will look like this when run:
+<P>
+<div>
+  <img src="images/jgrtx_channelmixer.jpg" alt="running ChannelMixer">
+</div>
+<P>
+
+You will usually get a gajillion warnings. These are usually of two major types: "not recognized" and "DUP WARNING". You might take a look at "not recognized" files, as these are ones Mineways' tools will ignore and not use. If you see something you'd like to use, you'll have to find that file and rename it to <a href="https://github.com/erich666/Mineways/blob/master/Win/tiles.h#L77">a standard name</a>. That code file <a href="https://github.com/erich666/Mineways/blob/master/Win/tiles.h#L77">I link to</a> gives one or two standard names for each block tile, e.g., the top of the grass block is usually called "grass_block_top" or "grass_top". All other variants are ignored. That said, you can ignore "not recognized" unless you feel like digging in.
+
+<P>
+A duplicate file name warning is likely of more interest to you. What this means is that two tile images have been found that are for a specific block face. This happens for any number of reasons. Typically, as in this case, the creator has a number of variations of the same Minecraft block, and they save these all. It's up to you to decide which one you want. I usually do this by digging into the unzipped resource pack area, usually in the assets\blocks directory or below, and comparing the two files. Whichever one I don't want, I rename it, adding an "_IGNORE_" prefix to it. It will then give a "not recognized" warning, but the duplicate warning is then gone.
+
+<P>
+There is a defective duplicate file you can do this to in 0.7.0 (removed in 0.8.0). I've <a href="https://github.com/jasonjgardner/jg-rtx/issues/4">reported it here</a>. In assets\blocks\dirt is a file "grass-tuft.png". This is yet another file name for "grass", and these alternate names are put in <a href="https://github.com/erich666/Mineways/blob/master/Win/tiles.h#L916">yet another part</a> of the Mineways code as I encounter them. This particular file is defective, in that it is missing an alpha channel. The "grass-tuft.png" file in assets\blocks\grass_block is OK, though. So, the fix is to rename the one in assets\blocks\dirt to "_IGNORE_grass-tuft.png" and then rerun ChannelMixer again. Pro tip: if you use the up-arrow in the CMD window, you will bring up previous lines you've typed, so you can run them again.
+
+<P>
+One other warning that you'll sometimes see is "TGA WARNING: The file 'iron_trapdoor.tga' is a TGA file (and there may be no corresponding PNG). Please convert it to PNG, as TileMaker does not process TGA files." Use some image manipulation program to convert this Targa file to PNG format, using the same name and location. Now ChannelMixer and TileMaker will find the proper PNG file (though each program <I>may</I> still warn you about the TGA; you can delete or hide the TGA file if you like).
+
+<P>
+Once you're done messing with warnings (which you absolutely don't have to do, to start), ChannelMixer has created a directory in c:\temp called "jg-rtx-channelmixer" and copied over all the files it thinks will be useful. That's what the two command-line arguments did for you:
+
+<PRE>
+-i "jg-rtx-0.7.0-alpha"
+</PRE>
+
+says the input directory is "jg-rtx-0.7.0-alpha", and
+
+<PRE>
+-o "jg-rtx-channelmixer"
+</PRE>
+
+says the output directory is "jg-rtx-channelmixer".
+
+<H3 id="tilemaker">TileMaker</H3>
+
+<P>
+Once you have a directory full of the textures you want to turn into a terrain file, the next step is to run TileMaker:
+
+<PRE>
+TileMaker.exe -d "jg-rtx-channelmixer" -o terrainExt_JG-RTX.png -t 256
+</PRE>
+
+TileMaker will take all the images ChannelMixer copied over and glue them up into one giant terrain file. It will also process chest images, turning them into (admittedly old-school) tiles. It will also attempt to make any missing tiles, either by copying tiles that do exist or manufacturing them (such as shulker boxes).
+
+<P>
+When you run TileMaker on JG-RTX 0.7.0-alpha, you will again get some warnings and errors:
+<P>
+<div>
+  <img src="images/jgrtx_tilemaker.jpg" alt="running TileMixer">
+</div>
+<P>
+
+Most errors are not as dire as they sound. TileMaker is warning you that a few input textures are not a standard powers-of-two size, such as 16x16 or 256x256. In Mineways, all tiles it uses are the same size, and are powers of two (2 raised to some power: 2, 4, 8, 16, etc.). If you want to make these textures get used in Mineways, you need to resize them to be a power of two, such as 256x256. Note that all errors are repeated at the end of the run, in a group, as these are usually important to work on.
+
+<P>
+The warnings note that a few files appear to have no effect, so have been ignored. This is fairly common for physically based textures such as heightfields, where the creator made a heightfield texture but didn't modify it and add bumps.
+
+<P>
+The command line options mean the following:
+
+<PRE>
+-d "jg-rtx-channelmixer"
+</PRE>
+
+This is the input directory of textures created by ChannelMixer. The double apostrophes are needed if there are spaces in the directory's name, so are not critical here (but don't hurt).
+
+<PRE>
+-o terrainExt_JG-RTX.png
+</PRE>
+
+This is the output file name. Once TileMaker finishes, you should (barring any serious errors) have a terrainExt_JG-RTX.png file in your current directory that you can apply to your models exported from Mineways.
+
+<PRE>
+-t 256
+</PRE>
+
+This option says to force all textures to be 256x256 in size. This is an important option for high resolution textures, and you'll get a warning if you don't set it. TileMaker looks at all the incoming textures and finds the largest. A large input texture will cause <I>all</I> textures to be increased to that size. This can be a serious problem, as the resulting terrain PNG file will become so large that it will be unusable by programs such as Blender, or may simply crash TileMaker itself. The "-t 256" option says to force this resolution. If you truly want to use larger textures, you can try to do so (fingers crossed). Also, if you are exporting individual tiles from Mineways, each texture is put separately into a directory, so you can manually copy these larger resolution textures there.
+
+<P>
+With TileMaker you can also do time-saving tricks such as setting "-t 64" or "-t 32", making a much smaller terrain PNG texture that will look fine for previews. Using a smaller terrain file makes for much faster Mineways exports.
+
+<P>
+One last trick: you can use TileMaker to read multiple directories (block-and-chest or original resource pack, if you're daring) and soak up all the textures it finds for terrain file creation. So, for example, you might like the Fancy pack, but if Fancy is missing something, then you might be happy with VanillaPBR instead. This looks something like "TileMaker.exe -d FancyDir -d VanillaPBRDir -o terrainExt_MySuperPack.png". By importing both directories in the order of preference, TileMaker will pull in whatever it finds for Fancy, then fill in (and will not warn you of duplicates) with VanillaPBR.
+
+<P>
+There are other options for ChannelMixer and TileMaker, but these are the major ones. See the <a href="#ref">reference section</a> at the end for all command-line options for each.
+
+<H2 id="pbr">Physically Based Textures</H2>
+
+"PBR" stands for "physically based rendering", a term meaning that the program rendering the image attempts to adhere to physical principles for materials. There's even a <a href="http://www.pbr-book.org/">free Oscar-winning book</a> on the subject. In a Minecraft context, "PBR" in part means improving block materials by adding new textures and parameters that influence their appearance, such as bump, shine/roughness, and more.
+
+<P>
+If you run through the tutorial above and look at your c:\temp at this point, you should have terrainExt_JG-RTX.png, plus four other textures of the form terrainExt_JG-RTX_*.png, that is, each with a suffix. These additional terrain files contain physically based material information. If you look at these additional terrain file textures, you'll usually see just a few spots filled in. These represent the textures found in the resource pack.
+
+<P>
+Each suffix stands for a different type of additional texture:
+
+<UL>
+<LI><B>_e</B> - Emissive: this gives how a block's face emits light. Think of the jack o' lantern, for example: you may want to have light come from only the eye and mouth holes.
+<LI><B>_m</B> - Metallic: is the material a metal or not? White means yes, black no, and grays can be thought of as rusty metal.
+<LI><B>_n</B> - Normals: a <a href="https://en.wikipedia.org/wiki/Normal_mapping">texture that captures the bumps</a> of a surface. The RGB color represents XYZ values from -1 to 1, where Z is straight away from the surface. Usually light-bluish overall, as a flat surface would have a color of (128,128,255), meaning a <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">normal</a> of (0,0,1).
+<LI><B>_r</B> - Roughness: how rough is the material? White means entirely rough, black means mirrorlike.
+</UL>
+
+These are the suffixes of files that TileMaker produces and that Mineways uses. When you select a terrain file in Mineways, if there is a corresponding "_n.png" terrain file (i.e., normals maps), then this terrain file will also be used when exporting models to the Wavefront OBJ and USDA formats. Sadly, this isn't terribly useful for Wavefront OBJ. For example, only a very few applications support having normal maps applied in an OBJ material file, as it's a non-standard extension of the ancient OBJ format. See <a href="mineways.html#full_material">this documentation</a> for more information. However, normal maps <I>are</I> useful for USDA export, as explained in the next section. In addition to normals, the emissive, metallic, and roughness terrain files are also used when exporting using USDA.
+
+<P>
+Applying these textures can give marvelous results, <a href="#jgrtx">as shown earlier</a>.
+
+<P>
+Mineways comes with this set of <a href="https://github.com/jasonjgardner/jg-rtx">JG RTX</a> textures at 64x64 and 256x256, massaged and cleaned up. Jason J. Gardner's JG RTX uses a non-commercial <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons license</a>. If you like it and use it, consider contributing to the charity he lists on his webpage, <a href="https://donate.doctorswithoutborders.org/monthly.cfm">Doctors Without Borders</a> (his idea inspired me to ask the same: if you like Mineways, consider giving a donation to <a href="https://www.givewell.org/">GiveWell</a> or whichever charity you prefer).
+
+<P>
+Mod makers over the years have developed a wide variety of these additional file types. ChannelMixer and TileMaker do their best to process these into the emissive/metallic/normals/roughness textures that Mineways uses. Here are some other file type suffixes you may encounter in various resource packs:
+
+<UL>
+<LI><B>_normal</B> - same as "_n". That said, you will also encounter _n and _normal files as holding <a href="https://www.nvidia.com/en-us/geforce/guides/minecraft-rtx-texturing-guide/">height maps</a>, where the color (usually red or sometimes grayscale) represents the perceived height of surface. TileMaker attempts to detect and convert such files into the RGB normal map format discussed earlier. TileMaker will also discard all normal maps found to have no effect.
+<LI><B>_heightmap</B> - a <a href="https://www.nvidia.com/en-us/geforce/guides/minecraft-rtx-texturing-guide/">height map</a>, processed similarly to the above.
+<LI><B>_mer</B> - often seen in .MCPack files for <a href="https://www.nvidia.com/en-us/geforce/campaigns/minecraft-with-rtx/">Minecraft RTX</a>. This format is explained in depth <a href="https://www.nvidia.com/en-us/geforce/guides/minecraft-rtx-texturing-guide/">here</a>.
+<LI><B>_s</B> - specular, or shininess. This is basically the inverse of roughness. When ChannelMixer encounters these textures, it creates a roughness texture instead, basically inverting the image (black becomes white and vice versa). However, in some packs, "_s" means "_sm", basically: the red channel is the shininess component, and the green channel is the metallic. Still other resource packs store in their "_s" textures shininess in red, metallic in green, and emissive in blue. Or, emissive in the alpha channel, according to the <a href="https://github.com/rre36/lab-pbr/wiki/Specular-Texture-Details">labPBR spec</a>.
+<LI><B>_o</B> - ambient occlusion, I believe. Seen in some forms of R3DCraft and nowhere else, it looks to be baked-in light maps. These files are ignored by ChannelMixer and TileMaker.
+</UL>
+
+ChannelMixer main task is to seek out relevant files and copies them over, splitting them up into separate textures as needed. It searches the directory structure, looking for textures it needs in areas such as the "\assets\minecraft\textures\block(s)" and "\assets\minecraft\textures\entity\chest" directories of the resource pack. It copies over the RGB, _n, and _normal textures, unmodified.
+It also converts _mer and _s files into the _m/_e/_r files used as input by TileMaker. As an aside, I've opted with Mineways to go with separate _m/_e/_r textures for clarity, to understand what each texture does. For example, if I instead used an _mer texture, it would not be clear if the author had all three textures, or just the roughness, or roughness and metallic, etc. ChannelMixer will attempt to figure out which of the channels in _mer and _s textures have meaning, i.e., have truly been set. A texture will not be used if it is default, i.e., if roughness is always 1.0, metallic is always 0.0, or emissive is always 0.0.
+
+<P>
+However, ChannelMixer is not perfect, so you can give ChannelMixer commands for what types of textures to ignore. For example, if you find your flowers are all glowing, bogus emissive textures may be at fault. You could delete these by hand from the block-and-chest directory where ChannelMixer puts it files. Or, if all emissive textures are useless, setting "-k e" on the command line of ChannelMixer says to ignore the _e emissive textures. This is often useful for labPBR textures (and ChannelMixer currently does not pay attention to the alpha channel as emissive, as labPBR specifies, as I have not yet found a resource pack that uses the emissive channel in this way). Setting "-k me" kills output of the metallic and emissive terrain files. To kill everything except the main, color terrain file, use "-k mern". In testing, I have found "-k e" useful for the FaithfulPBR, Flows Photorealism, Hodilton, Miejojo, and Ultimate Immersion resource packs, and "-k me" useful for the LunaHD, Meteor, UMSOEA, R3DCraft, and Tesellax resource packs.
+
+<P>
+Pro tip: if you want to see what blocks have what roughness, normals, or other textures directly, choose that texture when you use "File -> Choose Terrain File" in Mineways. With our JG RTX example, you could see the roughness textures by picking terrainExt_JG-RTX_r.png, the roughness texture. Most objects will be black, which means no texture applied. For example, here's <a href="https://www.curseforge.com/minecraft/texture-packs/vanilla-pbr">Vanilla PBR's</a> roughness textures applied to <a href="https://www.planetminecraft.com/project/qmagnets-texture-pack-test-map-13w03a/">QMAGNET's test world</a>. By the way, <a href="https://www.planetminecraft.com/project/restworld-a-complete-resourcepack-testing-world-for-1-15-2/">RestWorld</a> is another nice, comprehensive test world for textures.
+
+<P>
+<div>
+  <img src="images/vanilla_pbr_roughness.jpg" alt="Vanilla PBR roughness textures">
+</div>
+<P>
+
+<P>
+And, one last trick: I picked and chose a little with the JG RTX resource pack, as there were a few variant brick patterns and I didn't like the default (everyone's a critic...). If you use the JG RTX terrain set, but wish a few block faces were different, there are two ways to make that happen. You can always edit the resulting USDA file in Omniverse Create, by hand or by using a Python script (and I have no idea how to do that). If you want to make a more permanent change to a terrain file, you can do so pretty easily. You put the new block textures in some directory, say it's "new_blocks". You then do:
+
+<PRE>
+TileMaker.exe -i terrainExt_JG-RTX.png -d new_blocks -o terrainExt_JG-RTX_improved.png
+</PRE>
+
+The "-i terrainExt_JG-RTX.png" command says to use terrainExt_JG-RTX.png as your input texture, "new_blocks" as your new input block textures, and the result should go into your new output file terrainExt_JG-RTX_improved.png.
+
+<H2 id="resource_packs">Resource Packs</H2>
+
+There are literally thousands of these, and I've only begun to explore these myself. If you know of great PBR packs, <a href="contact.html">let me know</a>. If they're free to use non-commercially, I'm game to convert them to a Mineways terrain file set and put them up for people to download.
+
+<P>
+Some places I've looked:
+<UL>
+<LI><a href="https://www.curseforge.com/minecraft/texture-packs/absolution-resource-pack">Absolution</a> has lower resolution but realistic textures, with many blocks having textures (1440 total textures used, by my last count).
+<LI><a href="https://www.curseforge.com/minecraft/texture-packs/vanilla-pbr">Vanilla PBR</a> is another more traditional-looking pack with even more blocks (1782 used).
+<LI><a href="https://www.curseforge.com/minecraft/texture-packs/muddle">Muddle</a> is a pack with a darker, more medieval look (1699 textures used).
+<LI><a href="https://www.curseforge.com/minecraft/texture-packs/photo-realistic">Curseforge</a> has many other packs, some with physical material textures. I've only scratched the surface here.
+<LI><a href="https://www.reddit.com/r/minecraftRTX/comments/iq3lkl/getting_startedhelpful_guidesresource_packs/">Reddit</a> has a getting started guide for Bedrock packs. These generally convert well; Smoolistic and JG RTX are two I particularly like.
+<LI><a href="https://shaders.fandom.com/wiki/Shader_Packs">Fandom Minecraft Shaders</a> has a whole bunch; I haven't explored this list.
+<LI><a href="https://www.nvidia.com/en-us/geforce/guides/minecraft-rtx-texturing-guide/">PBR Texturing Guide</a> is worth another mention, a guide to making PBR material textures.
+<LI><a href="https://github.com/TheDuckCow/MCprep/issues/78">MCPrep thread</a> discusses how this related utility is working to incorporate physically based materials in its translator. Good overview of the chaotic realistic resource pack format scene. If you want to directly use Mineways exports with Blender, <a href="https://theduckcow.com/dev/blender/mcprep/">explore MCPrep</a> as an option. I hope to work on supporting PBR in both Blender and MCPrep in the future.
+</UL>
+
+Here are <a href="https://photos.app.goo.gl/sUbwZjZ6JxgPGU4HA">more resource pack previews</a>, which are not that fascinating from a distance (it's the details that are cool), but give you some idea of what these packs look like.
+
+<H1 id="ref">Reference Section</H1>
+
+Here we list the command line options for ChannelMixer and TileMaker.
+
+<H2>ChannelMixer Reference</H2>
+
+ChannelMixer's purpose is to find relevant block and chest textures inside an unzipped resource pack (or Minecraft itself) and copy these over to an intermediate directory. TileMaker then processes these textures. See the tutorial at the top of this page. <B>Note:</B> currently the program works only on the PC. I have heard you can run it through WINE or <a href="http://www.macworld.com/article/1164817/the_best_way_to_run_windows_on_your_mac.html">some emulator</a> (which should work but costs money).
+
+<P>
+Here is a reference for all ChannelMixer options. To get a reminder of these, type:
+<PRE>
+ChannelMixer -?
+</PRE>
+on the command line.
+<P>
+<b>Usage:</b> ChannelMixer [-v] [-i inputTexturesDirectory] [-o outputTexturesDirectory] [-m] [-k {m|e|r|n}]
+<UL>
+<LI><b>-v</b> - verbose, explain everything going on. Default: display only warnings and errors.
+<LI><b>-i inputTexturesDirectory</b> - directory of textures to search and process.
+        If none given, current directory.
+<LI><b>-o outputTexturesDirectory</b> - directory where resulting textures will go.
+        If none given, current directory.
+<LI><b>-m</b> - output merged '_mer' format files in addition to separate files, as found. Experimental (as in, I've rarely used it). Can maybe be a help if you want to make a <a href="https://www.nvidia.com/en-us/geforce/guides/minecraft-rtx-texturing-guide/">MER MCPack format texture</a> from separate _m/_e/_r files.
+<LI><b>-k {m|e|r|n}</b> - kill creation of the metallic, emissive, roughness, and/or normals textures. These files, if present, will not be copied over or created. For example, "-k mern" suppresses all physically based material creation so that only color textures are copied. Using "-k e" suppresses pulling in the blue channel in any "_s" type file, a common use, as this channel is sometimes set to something else (such as in labPBR).
+</UL>
+
+<H2>TileMaker Reference</H2>
+
+TileMaker is a command-line utility for making a terrainExt.png file, which is the file that Mineways uses to add textures to surfaces. <B>Note:</B> currently the program works only on the PC. I have heard you can run it through WINE or <a href="http://www.macworld.com/article/1164817/the_best_way_to_run_windows_on_your_mac.html">some emulator</a> (which should work but costs money).
+<P>
+TileMaker works by using a few different textures from Minecraft and from a texture pack to create a new texture to feed to Mineways. See the tutorial at the top of this page.
+<P>
+Here is a reference for all TileMaker options. To get a reminder of these, type:
+<PRE>
+TileMaker -?
+</PRE>
+on the command line.
+<P>
+<b>Usage:</b> TileMaker [-i terrainBase.png] [-d blocks] [-o terrainExt.png]
+        [-t tileSize] [-c chosenTile] [-nb] [-nt] [-r] [-m] [-a] [-v]
+
+<UL>
+<LI><b>-v</b> - verbose, explain everything going on. Default: display only warnings and errors.
+<LI><b>-i terrainBase.png</b> - (path and) image containing the base set of terrain blocks
+    (includes special chest tiles). Default is 'terrainBase.png', with this file assumed to be
+	located in the current directory you are running TileMaker from, i.e., <I>your current directory
+	in your CMD window</I> (which is not necessarily where TileMaker.exe is located). If no terrainBase.png
+	is found in your directory, TileMaker will automatically look in the directory above for terrainExt.png.
+<LI><b>-d blocks</b> - directory of block textures to overlay on top of the base.
+    Default directory is 'blocks'. Can be set multiple times to include
+    multiple directories.
+<LI><b>-o terrainExt.png</b> - the resulting terrain image, used by Mineways. Default is
+    terrainExt.png.
+<LI><b>-t tileSize</b> - force a given (power of 2) tile size for the resulting terrainExt.png
+    file, e.g. 32, 128. Useful for zooming or making a 'draft quality'
+    terrainExt.png. If not set, the resolution of the largest tile found is used.
+<LI><b>-h #</b> - scale any normalmap heightfields by this value. Default is 0.5.
+<LI><b>-c chosenTile</b> - for tiles with multiple versions in a vertical strip,
+     (e.g. water, lava, portal), choose which tile to use. 0 means topmost, 1 second from top, 2 etc.;
+     -1 bottommost, -2 next to bottom. Available, but don't bother with it.
+<LI><b>-nb</b> - no base; the base texture terrainBase.png is not read. This option is
+    good for seeing what images are in the blocks directory, as these are
+    what get put into terrainExt.png. The rest will be black.
+<LI><b>-nt</b> - no tile directory; don't read in any images in the 'blocks' directory,
+    just the base texture is read in. Useful mostly for resizing the base texture or getting an average color output terrain file.
+<LI><b>-r</b> - replace (from the 'blocks' directories) only those tiles not in the base
+    texture. This is a way of extending a base texture to new versions of Mineways. You will likely never use this.
+<LI><b>-m</b> - to report all missing tiles, ones that Mineways uses but were not in the
+    tiles directory.
+<LI><b>-s</b> - take the average color of the incoming tile and output this solid color.
+<LI><b>-S</b> - as above, but preserve the cutout transparent areas.
+</UL>
+<HR>
+
+	</div> <!-- /content -->
+	<div id="footer">
+		<hr>
+		<p>Webmaster: <a href="mailto:erich@acm.org">Eric Haines</a>, erich@acm.org - visit the <a href="contact.html">support page</a>
+		<br id="lastUpdate">Last updated 2/1/2022</p>	</div>
+</div>
+
+</body>
+</html>
+
+

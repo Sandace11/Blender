@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
+   <link rel="icon" href="icon.ico" type="image/x-icon" />
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+   <title>Mineways Scripting Language</title>
+</head>
+<body>
+<div id="wrapper">
+	<div id="mineways-header-image">
+		<a href="contact.html">
+		<img src="images/mineways_header.jpg" alt="Header image" width="787" height="125" />
+		</a>
+	</div>
+
+	<div id='cssmenu'>
+	<ul>
+		<li><a href="index.html"><span>Home</span></a></li>
+		<li class='has-sub'><a href="downloads.html"><span>Quickstart</span></a>
+			<ul>
+				<li><a href="downloads.html#downloadImgs">Downloads</a></li>
+				<li><a href="downloads.html#instructions">Quick Instructions</a></li>
+				<li><a href="downloads.html#referenceHelp">Reference Help</a></li>
+				<li><a href="downloads.html#windowsPlatformHelp">Windows Help</a></li>
+				<li><a href="downloads.html#macPlatformHelp">Mac Help</a></li>
+				<li><a href="downloads.html#linuxPlatformHelp">Linux Help</a></li>
+				<li><a href="downloads.html#generalTrouble">General Troubleshooting</a></li>
+				<li><a href="downloads.html#knownBugs">Known Bugs</a></li>
+				<li><a href="downloads.html#howToPrint">How To 3D Print</a></li>
+			</ul>
+		</li>
+		<li class='has-sub'><a href="mineways.html"><span>Documentation</span></a>
+			<ul>
+				<li><a href="mineways.html"><span>Full page</span></a></li>
+				<li><a href="textures.html"><span>Textures</span></a></li>
+				<li><a href="reference.html"><span>Quick Reference</span></a></li>
+				<li><a href="downloads.html#troubleshooting"><span>Troubleshooting</span></a></li>
+				<li><a href="mineways.html#rendering"><span>Rendering Tips</span></a></li>
+				<li><a href="http://www.youtube.com/playlist?list=PL3AE7AB94E9114715&feature=mh_lolz"><span>Videos</span></a></li>
+				<li class='active'><a href="scripting.html"><span>Scripting</span></a></li>
+				<li><a href="mineways.html#versions"><span>Versions</span></a></li>
+				<li class='last'><a href="https://github.com/erich666/Mineways"><span>Source Code</span></a></li>
+			</ul>
+		</li>
+		<li class='has-sub'><a href="community.html"><span>Galleries</span></a>
+			<ul>
+				<li><a href="community.html"><span>Showcase</span></a></li>
+				<li><a href='http://www.flickr.com/groups/mineways/pool/'><span>Flickr</span></a></li>
+				<li><a href='https://www.google.com/search?q=mineways&newwindow=1&source=lnms&tbm=isch'><span>Google Images</span></a></li>
+				<li><a href='https://www.shapeways.com/search?q=mineways'><span>Shapeways</span></a></li>
+				<li><a href='http://www.sculpteo.com/en/gallery/today/?search=mineways'><span>Sculpteo</span></a></li>
+				<li class='last'><a href='https://sketchfab.com/tags/minecraft'><span>Sketchfab</span></a></li>
+			</ul>
+		</li>
+		<li class='has-sub'><a href="http://www.reddit.com/r/mineways/"><span>Community</span></a>
+			<ul>
+				<li><a href="http://www.reddit.com/r/mineways/"><span>Reddit</span></a></li>
+				<li><a href="https://discord.gg/wfayQA6Dyc"><span>Discord</span></a></li>
+				<li><a href="https://www.minecraftforum.net/forums/minecraft-java-edition/discussion/326119-mineways-3d-prints-of-minecraft-objects?page=100"><span>Minecraft Forum</span></a></li>
+				<li><a href="https://groups.google.com/forum/#!forum/mineways"><span>Google Group</span></a></li>
+				<li class='last'><a href="https://github.com/erich666/Mineways/issues"><span>Issues on Github</span></a></li>			</ul>
+		</li>
+		<li class='last'><a href="contact.html"><span>Contact</span></a></li>
+	</ul>
+	</div>
+	
+    <div id="content" class="clearfix">
+<P>
+<B>Executive summary:</B> make a text file with some commands in it and read this file in using Import Settings. You can perform almost every Mineways operation by using a command instead of the user interface. You can <a href="#soc">change how the mouse buttons are mapped</a>. You can also temporarily <a href="#soc">change, add, or clear any blocks</a> you like for an export. You can also <a href="#amfwm">associate scripts with Mineways</a> so double-clicking any of them starts Mineways and runs the script.
+<P>
+<UL>
+<LI><a href="#msl">Mineways Scripting Language</a>
+<UL>
+<LI><a href="#mfi">Model File Import</a>
+</UL>
+<LI><a href="#so">Scripting Overview</a>
+<UL>
+<LI><a href="#mec">Model Export Commands</a>
+<UL>
+<LI><a href="#sqes">Example</a>
+</UL>
+<LI><a href="#sic">Scripting Interface Commands</a>
+<UL>
+<LI><a href="#uie">Examples</a>
+</UL>
+<LI><a href="#sketchfab">Sketchfab Export Commands</a>
+<UL>
+<LI><a href="#sketchfabe">Example</a>
+</UL>
+<LI><a href="#soc">Script-Only Commands</a>
+<UL>
+<LI><a href="#cbce">Change blocks command examples</a>
+</UL>
+<LI><a href="#c">Comments</a>
+<UL>
+<LI><a href="#ce">Examples</a>
+</UL>
+</UL>
+<LI><a href="#clo">Command Line Options</a>
+<LI><a href="#amfwm">Associating .mwscript files with Mineways</a>
+<LI><a href="#default">Default Rendering Options</a>
+<LI><a href="#pse">Perl Script Example</a>
+</UL>
+
+
+<h1 id="msl">Mineways Scripting Language</h1>
+		The "Import Settings" item in the File menu has two uses. One is that you can read in a model previously created with Mineways. Doing so will set up Mineways to be identical to how it was when the file was exported: the world, terrain file, color scheme, and all export settings will be set to what you used when you exported the model. This is handy for continuing to work on a model you exported in a previous session.
+		<P>
+		However, "Import Settings" can do much more. As of version 4.18 of Mineways, you can make a text file of Mineways scripting commands and read it in to:
+		<UL>
+		<LI>Set up a start-up configuration, similar to how model files can set the environment, plus setting initial location, zoom level, and other parameters.
+		<LI>Automate a series of exports, so that you could create a whole series of files. This is handy if you want to export hunks of terrain for a level of detail system, for example.
+		<LI>Access script-only commands that are too involved to expose in the menus. Some examples include:
+			<UL>
+			<LI> Turning your cobblestone castle into true stone, or even gold or diamond.
+			<LI> Adding a base to a model you produced so it will stand up when 3D printed.
+			<LI> Create sets of commands to make <a href="https://skfb.ly/OXVQ">whatever you want</a> out of different blocks.
+			<LI> Or, simply trimming away particular cubes that you don't want to remove in your Minecraft world itself.
+			</UL>
+		</UL>
+		None of these functions will affect your original Minecraft world. Mineways considers that data unmodifiable. The changes are performed temporarily on whatever you next export, and not displayed on the map.
+		<P>
+		Script files have the suffix ".mwscript". When using "Import Settings" note that you can use the file filter of the import dialog to display only these types of files.
+
+
+<h2 id="mfi">Model File Import</h2>
+
+		Model files have first lines such as:
+		<P>
+<div id="code">
+# Wavefront OBJ file made by Mineways<br>
+#VRML V2.0 utf8<br>
+# Minecraft world: beta test world<br>
+# Extracted from Minecraft world saves/BestWorld
+</div>
+		<P>
+		Model export files have all their commands preceded by a "#", scripting language files do not. Script files are simple text files, and are usually stored with the suffix "*.mwscript". See the files that come with the Mineways distribution for examples. A file is considered to be a script if Mineways looks at it and doesn't think it's from a model.
+		<P>
+		One note on model import: for STL files the file you need to import is labeled *.txt. For example, if you export AwesomeCastle.stl, Mineways also creates an AwesomeCastle.txt file with statistics and settings about your export. OBJ and VRML files have these statistics contained at the top of their exported *.obj and *.wrl files.
+
+		
+<h1 id="so">Scripting Overview</h1>
+
+		Most commands consist of a single line, and usually have a colon in them. There are two classes of commands: those that are recognized when an exported model is read in, and those recognized when a script is read. Most, but not all, of the exported model commands are recognized as script commands.
+		<P>
+		You can take many of the export commands found in model files and use them in a script you're creating. Transferring text from the top of a exported model to a script file is an easy way to get properly-formed commands in place. Simply remove the "#" from in front of each command to use it in a script file. See <a href="#default">this section</a> for what the default settings are when exporting for rendering.
+		
+		
+<h2 id="mec">Model Export Commands</h2>
+
+		Here is the full list of model export commands. When found in a model file, each line is preceded by a "#"; in scripting files the "#" is not used. Text in italics is shown as an example. "[deprecated]" means this format is output by older versions of Mineways.
+		<P>
+		
+<TABLE id="modelExportTable" border="1">
+<tr>
+<td WIDTH="50%">
+<B>Model Export/Script command syntax</B>
+</td>
+<td>
+<B>Notes</B>
+</td>
+</tr>
+
+<tr>
+<td>
+# Wavefront OBJ file made by Mineways<br>
+#VRML V2.0 utf8<br>
+# Minecraft world: <i>beta test world</i><br>
+# Extracted from Minecraft world saves/<i>BestWorld</i> [deprecated]
+</td>
+<td>
+<b>Model only.</b> One of these must be the first line encountered in a model (or for STL, text statistics) file that is imported. The italicized text is the world's folder in the .minecraft/saves directory.
+</td>
+</tr>
+
+<tr>
+<td>
+Minecraft world: <i>Happy Blocks Land</i><br>
+Minecraft world: <i>C:\Users\erich\AppData\Roaming\.minecraft\saves\Round World</i><br>
+Minecraft world: <i>C:\Users\erich\schematics\teapot.schematic</i><br>
+Minecraft world: [Block Test World]
+Extracted from Minecraft world saves/<i>BestWorld</i> [deprecated]
+</td>
+<td>
+The world to load, accessed by the folder name. The .minecraft/saves directory is assumed, but a full path can be given if desired. The full path is always needed for schematics. Use <I>[Block Test World]</I> to load this special test world.
+</td>
+</tr>
+
+<tr>
+<td>
+View Overworld<br>
+View Nether<br>
+View The End
+</td>
+<td>
+Change to the given map level (will appear all gray if the level does not exist). For model export "View Overworld" is not output, since it's the default.
+</td>
+</tr>
+
+<tr>
+<td>
+Terrain file name: <i>C:\Users\erich\Desktop\Mineways\terrainExt_Sphax.png</i><br>
+Terrain file name: <i>terrainExt_DokuLight.png</i>
+</td>
+<td>
+Sets terrain file to be used. Full path is recommended; if just a file name is given, Mineways looks in the load or last-used directory.
+</td>
+</tr>
+
+<tr>
+<td>
+Color scheme: <i>no glass blocks</i>
+</td>
+<td>
+Selects the named color scheme, if available. "Standard" is the default.
+</td>
+</tr>
+
+<tr>
+<td>
+Selection location min to max: <i>-199, 0, -466</i> to <i>-176, 255, -442</i><br>
+Selection location: <i>60, 0, 60</i> to <i>80, 255, 100</i><br>
+Selection location: none
+Selection location: all
+</td>
+<td>
+Select the volume to be exported, inclusive. Either form is fine. The volume is defined by a minimum and maximum block location. The commas, spaces, and "to" string do matter here. If "none" is found, deselection occurs (Escape key in Mineways). If "all" is found, the values <i>-5000, 0, -5000</i> to <i>5000, 255, 5000</i> are used, which is usually enough to select any schematic imported - this is just a simple shorthand instead of writing it all out. This option is also handy for superflat Creative worlds, where you just want to export the whole place.
+</td>
+</tr>
+
+<tr>
+<td>
+Set render type: <i>Wavefront OBJ absolute indices</i><br>
+Set render type: <i>Wavefront OBJ relative indices</i><br>
+Set render type: <i>USD 1.0</i><br>
+Set render type: <i>Binary STL iMaterialise</i><br>
+Set render type: <i>Binary STL VisCAM</i><br>
+Set render type: <i>ASCII STL</i><br>
+Set render type: <i>VRML 2.0</i><br>
+Set 3D print type: <i>Wavefront OBJ absolute indices</i><br>
+Created for Viewing - <i>Wavefront OBJ absolute indices</i> [deprecated]<br>
+Created for 3D printing - <i>Wavefront OBJ absolute indices</i> [deprecated]
+</td>
+<td>
+Set target for commands to export for rendering or 3D printing, and specify the file format to be used. Whatever file type is set, render or 3D print, along with the file format, is the set of export options that will be affected by the export commands that follow. If none is set, export commands will affect "Set render type: <i>Wavefront OBJ absolute indices</i>". If you set export settings and then switch to another file export type or file format, don't expect the options to also be set there.
+<br>
+Not all file types are shown for the 3D print type and deprecated versions, to avoid repetition; these are all the same as shown for rendering.
+</td>
+</tr>
+
+<tr>
+<td>
+File type: <i>Export no materials</i><br>
+File type: <i>Export solid material colors only (no textures)</i><br>
+File type: <i>Export noise textures with color</i><br>
+File type: <i>Export all textures to three large images</i><br>
+File type: <i>Export individual textures to directory texture</i><br>
+</td>
+<td>
+Yes, this is kind of a bad name, "Material type" would have been better. The type of material export done. Note that for "individual textures," where a separate texture is exported for each block face, a directory is also specified. This is shown here as "directory texture" and should be a simple folder name, not a path.
+</td>
+</tr>
+
+<tr>
+<td>
+Units for the model vertex data itself: <i>millimeters</i>
+</td>
+<td>
+Meaningful only for 3D printing export. Valid units: millimeters, centimeters, meters, inches.
+</td>
+</tr>
+
+<tr>
+<td>
+Rotate model <i>0.000000</i> degrees
+</td>
+<td>
+Number of degrees model is rotated on output. Valid values are 0, 90, 180, 270.
+</td>
+</tr>
+
+<tr>
+<td>
+Scale model by <i>making each block 2 mm high</i><br>
+Scale model by <i>fitting to a height of 5 cm</i><br>
+Scale model by <i>using the minimum wall thickness for the Sculpteo multicolor material</i><br>
+Scale model by <i>aiming for a cost of 25.00 for the colored sandstone material</i>
+</td>
+<td>
+Meaningful only for 3D printing export. There are many variants here; the simplest way to find the text you want is to export manually and examine the top of the file exported.  See <a href="mineways.html#options">the export options</a> for more information.
+</td>
+</tr>
+
+<tr>
+<td>
+Fill air bubbles: <i>YES</i>; Seal off entrances: <i>no</i>; Fill in isolated tunnels in base of model: <i>no</i><br>
+Connect parts sharing an edge: <i>YES</i>; Connect corner tips: <i>YES</i>; Weld all shared edges: <i>no</i><br>
+Delete floating objects: trees and parts smaller than 16 blocks: <i>YES</i><br>
+Hollow out bottom of model, making the walls 2 mm thick: <i>no</i>; Superhollow: <i>no</i><br>
+</td>
+<td>
+Typically used for 3D printing export. See <a href="mineways.html#options">the export options</a> for more information.
+</td>
+</tr>
+
+<tr>
+<td>
+Texture output RGB: <i>YES</i><br>
+Texture output A: <i>YES</i><br>
+Texture output RGBA: <i>YES</i><br>
+Export separate objects: <i>YES</i><br>
+Individual blocks: <i>no</i><br>
+Material per family: <i>YES</i><br>
+G3D full material: <i>YES</i><br>
+Export MDL: <i>YES</i><br>
+Light scale: <i>30</i><br>
+Surface emit scale: <i>30</i><br>
+Make Z the up direction instead of Y: <i>no</i><br>
+Create composite overlay faces: <i>no</i><br>
+Center model: <i>YES</i><br>
+Export lesser blocks: <i>YES</i><br>
+Fatten lesser blocks: <i>no</i><br>
+Make tree leaves solid: <i>no</i><br>
+Create block faces at the borders: <i>YES</i><br>
+Use biomes: <i>YES</i><br>
+Melt snow blocks: <i>no</i><br>
+Debug: show separate parts as colors: <i>no</i><br>
+Debug: show weld blocks in bright colors: <i>no</i>
+</td>
+<td>
+Booleans. Boolean values are set as YES/yes/TRUE/true/1; anything else found for a boolean is considered false. See <a href="mineways.html#options">the export options</a> for more information. "Use biomes: YES" also turns on biome display, so that the effect is seen.
+</td>
+</tr>
+
+</table>
+
+
+<h3 id="sqes">Example</h3>
+
+Here is an example of a script using the commands above.
+<P>
+<div id="code">
+Minecraft world: My Cool World<br>
+Color scheme: no glass<br>
+Terrain file name: C:\Users\erich\Desktop\Mineways\terrainExt_DokuLight.png<br>
+Set render type: Wavefront OBJ absolute indices<br>
+Use biomes: no<br>
+Selection location min to max: -368, 83, 16 to -351, 255, 30<br>
+</div>
+<P>
+This loads a world, changes its color scheme to "no glass", selects a terrain file, selects rendering to an OBJ file, turn biomes on, and finally selects a volume to export.	
+
+
+<h2 id="sic">Scripting Interface Commands</h2>
+
+The commands above are available for scripting, unless listed as <B>"Model only."</b> All script commands are used without a "#" in front of each line. Comments "//" and "/* */" are respected.
+<P>
+If you wish to set any export options, it's wise to first set the export mode and file type by using the "Set render type:" or "Set 3D print type:" command. If you don't, the export settings will be applied to whatever file type was last exported, if any, and a warning will pop up.
+<P>
+Because it's a powerful system that can itself create files, the script file is read twice. Syntax errors are checked for and flagged on the first read; no actions are done. If there are no syntax errors, then the script is read again and executed line by line. Script execution is aborted if some execution error is found and caught. Pro tip: if you want to test a script for syntax errors and not execute it, put "FAIL" (or anything else that's not a command) as a line in the script. It will flag this line, and any other lines causing errors, and will not execute the script until all are fixed.
+<P>
+Even with error checking, it's definitely possible to set combinations that may crash Mineways, as there are complex interactions between systems and especially between blocks and some combinations are simply illegal. If things get wedged, just restart Mineways, which always resets its defaults to a known good state.
+<P>
+
+<TABLE id="scriptingTable" border="1">
+<tr>
+<td WIDTH="50%">
+<B>Script command syntax</B>
+</td>
+<td>
+<B>Notes</B>
+</td>
+</tr>
+
+<tr>
+<td>
+Jump to Spawn<br>
+Jump to Player<br>
+Jump to Model
+</td>
+<td>
+Jump the view to the specific location.
+</td>
+</tr>
+
+<tr>
+<td>
+Reset export options: <i>Render</i><br>
+Reset export options: <i>3D Print</i><br>
+Reset export options: <i>Schematic</i>
+</td>
+<td>
+Reset all the options for <i>all</i> file formats for the given export mode. Lets you start with a clean slate.
+</td>
+</tr>
+
+<tr>
+<td>
+Focus view: <i>-210, 73</i><br>
+</td>
+<td>
+Set the view to be centered on this position on the map, X (East-West, East is positive) and Z (North-South, South is positive).
+</td>
+</tr>
+
+<tr>
+<td>
+Zoom: <i>5</i><br>
+</td>
+<td>
+Zoom in on the view, higher is more zoomed in. The legal range is 1 to 40, inclusive, and represents the width of each block in pixels.
+</td>
+</tr>
+
+<tr>
+<td>
+Show all objects: <i>true</i><br>
+Show biomes: <i>YES</i><br>
+Elevation shading: <i>false</i><br>
+Lighting: <i>no</i><br>
+Cave mode: <i>TRUE</i><br>
+Hide obscured: <i>yes</i>
+Transparent water: <i>no</i>
+Map grid: <i>no</i>
+</td>
+<td>
+Set map view mode on or off, using TRUE/true/YES/yes/1 for on. Note that, as usual, showing the biomes doesn't set the checkbox to export them (well, export the biome in the center of the volume exported). The command "Use biomes: YES" does that.
+</td>
+</tr>
+
+<tr>
+<td>
+Select minimum height: <i>55</i><br>
+Select minimum height: <i>-12</i><br>
+Select minimum height: <i>+5</i><br>
+Select minimum height: <i>V</i><br>
+Select minimum height: <i>v</i><br>
+Select minimum height: <i>V43</i><br>
+Select minimum height: <i>v63</i><br>
+</td>
+<td>
+Set the minimum height slider for the box volume to be exported. The +/- versions give a relative change, e.g., "-12" means subtract 12 from the current level, whatever it is. V/v is used to set the height level by looking at the selected area, plus a one-block border around it, and selecting the lowest height of the entire set of visible blocks. "V" means "ignore semitransparent blocks", those that can be seen through, such as water and glass. "v" means to pay attention to such blocks. Finally, V/v followed by a number means to use the level found, or the level specified, whichever is <i>larger</i>. For example, "V47" means find the minimum level of the selected area (plus one block border). If that level is greater than 47, use it; if less than 47, set the level to 47.
+<P>
+While involved to explain, settings such as "V43" can be useful for exporting the above-ground visible area - 43 is as deep as the oceans normally ever go. Deeper than this and the selected area probably has a deep hole that throws off the level. If you're exporting separate pieces of terrain for viewing, "V" is usually safe for showing everything above ground (you might miss an area with a large overhang, though, since the overhang will limit the minimum level found). If you <i>know</i> that you don't care about anything lower than, say, 57, then use "V57" to make sure the minimum level set is never lower than 57.
+</td>
+</tr>
+
+<tr>
+<td>
+Select maximum height: <i>119</i>
+</td>
+<td>
+Set the maximum height slider for the box volume to be exported and that is visible.
+</td>
+</tr>
+
+<tr>
+<td>
+Give more export memory: <i>YES</i>
+</td>
+<td>
+On the 32-bit version (and on the Mac) you can run out of memory on export. This option frees up all the allocated map data and reloads it only as needed during export, giving Mineways more memory to use for its other processes. At the end of export the visible world is reloaded for display. This option can cause export to go more slowly.
+</td>
+</tr>
+
+<tr>
+<td>
+Export for rendering: <i>c:\temp\my_save.obj</i><br>
+Export for 3D printing: <i>my_print.stl</i><br>
+Export schematic: <i>c:\temp\my schematics\my_object.schematic</i><br>
+Export map: <i>my_map.png</i>
+</td>
+<td>
+Export the selected area using the given file type to the specified file. Note that (unlike the manual process, where you pick the file then set options) this export happens immediately, so you need to set all your export options before giving this command.
+</td>
+</tr>
+
+<tr>
+<td>
+Close
+</td>
+<td>
+This command has a dramatic effect: it closes the program! This can be useful if you want to run a script and exit when it's done.  Combined with a <a href="#clo">startup script</a>, you can make Mineways run a script and exit by just a double-click. You can also use the "-m" command-line option to have Mineways start up minimized, not showing its window. Note that if the script runs with any errors, error processing is done before the script closes, so that processing will stop and you'll be warned. If you don't want to ever halt on errors, use a log file; see the commands that follow.
+</td>
+</tr>
+
+</TABLE>
+
+
+<h3 id="uie">Examples</h3>
+
+Here is an example of a script using the commands above.
+<P>
+<div id="code">
+Set render type: Wavefront OBJ absolute indices<br>
+View Nether<br>
+Selection location min to max: -38, 83, 16 to -31, 127, 30<br>
+Zoom: 9<br>
+Export for Rendering: C:\Users\erich\Desktop\nether.obj<br>
+</div>
+<P>
+For the world that is currently loaded, this sets the render type and file format, switches to the Nether level of the world loaded, selects an area, zooms the map, and performs a rendering export to the file nether.obj
+<P>
+Note that you could use this type of command sequence to export a bunch of adjacent areas, which you could then load into Blender or any other application as you wished. This can help you avoid hitting memory limits in Mineways, etc. Here's a script that comes with Mineways (along with hunk_maker.py, a Python program you can modify to generate sets of hunks as you wish):
+</P>
+<P>
+<div id="code">
+// file hunk_output.mwscript.txt
+Set render type: Wavefront OBJ absolute indices<br>
+File type: Export individual textures to directory texture<br>
+Center model: no<br>
+Use biomes: no<br>
+Create block faces at the borders: no<br>
+Selection location min to max: 0, 50, 0 to 99, 255, 99<br>
+Export for Rendering: C:\Users\erich\Desktop\hunk00.obj<br>
+Selection location min to max: 0, 50, 100 to 99, 255, 199<br>
+Export for Rendering: C:\Users\erich\Desktop\hunk01.obj<br>
+Selection location min to max: 100, 50, 0 to 199, 255, 99<br>
+Export for Rendering: C:\Users\erich\Desktop\hunk10.obj<br>
+Selection location min to max: 100, 50, 100 to 199, 255, 199<br>
+Export for Rendering: C:\Users\erich\Desktop\hunk11.obj<br>
+</div>
+<P>
+Load your world, run this script via Import Settings, and it will dump four exports, with absolute coordinates, so that they can be loaded into a modeler and nicely join with each other. The "50" lower Y height is just a guess as to how deep you might want to go for a typical above-ground export - you can override this as you wish. Biomes are off, since the biome is computed for the center of each hunk and so will differ. Block faces at the borders being off means that the polygons where the hunks join are not output, saving on polygon count. You can set that to "yes" if you prefer. You 
+<P>
+The one gotcha is that differently named (but usually identical in content) PNG texture files are made for each separate model. If you prefer sharing PNG files (which saves on memory), I solve this problem here by setting the File type to use individual textures for each block type face, such as "grass_top.png"; these have the same names for all exported files.
+
+
+<h2 id="sketchfab">Sketchfab Script Commands</h2>
+
+You can use script commands to upload models to <a href="https://sketchfab.com">Sketchfab</a>, where you can set up a free account. The one element you must set is the token.
+
+<P>
+<TABLE id="scriptingTable" border="1">
+<tr>
+<td WIDTH="50%">
+<B>Script command syntax</B>
+</td>
+<td>
+<B>Notes</B>
+</td>
+</tr>
+
+<tr>
+<td>
+Sketchfab token: <i>32 character token from your account</i><br>
+</td>
+<td>
+The API token from your <a href="https://sketchfab.com/settings/password">Sketchfab account</a>. Must be present. <B>Keep your API Token SECRET.</B>
+</td>
+</tr>
+
+<tr>
+<td>
+Sketchfab title: <i>title</i><br>
+</td>
+<td>
+Title for your upload, maximum of 48 characters.
+</td>
+</tr>
+
+<tr>
+<td>
+Sketchfab description: <i>description</i><br>
+</td>
+<td>
+Description for your upload, maximum of 1024 characters.
+</td>
+</tr>
+
+<tr>
+<td>
+Sketchfab tags: <i>tag1 tag2 ...</i><br>
+</td>
+<td>
+Tags for your upload, e.g., "castle waterfall". The tags "minecraft" and "mineways" are always added. Maximum of only 29 characters.
+</td>
+</tr>
+
+<tr>
+<td>
+Sketchfab private</i><br>
+</td>
+<td>
+If present, the "Private (Pro only)" box is checked.
+</td>
+</tr>
+
+<tr>
+<td>
+Sketchfab password: <i>password</i><br>
+</td>
+<td>
+If "private" is set, as above, then you can also specify a password, up to 32 characters long.
+</td>
+</tr>
+
+<tr>
+<td>
+Publish to Sketchfab</i><br>
+</td>
+<td>
+As it says. Once the API token and any other options are set, the currently-selected volume is exported to Sketchfab.
+</td>
+</tr>
+
+</TABLE>
+
+<P>
+These commands can set almost all the fields that Sketchfab permits. The one exception is "Categories" - if you want to set these, you will need to do so manually on Sketchfab's site. 
+
+
+<h3 id="sketchfabe">Example</h3>
+
+Here is an example of a script using the Sketchfab commands above.
+<P>
+<div id="code">
+Sketchfab token: <a href="https://sketchfab.com/settings/password">your 32-character API token here</a><br>
+Sketchfab title: Best Castle Ever<br>
+Sketchfab description: This is the finest castle ever made, with indoor plumbing, lighting, and wifi-enabled drawbridges.<br>
+Sketchfab tags: castle wifi<br>
+Publish to Sketchfab<br>
+</div>
+<P>
+The description and tags are optional. The proper strings are set, and then the model is uploaded to Sketchfab.
+
+
+<h2 id="soc">Script-only Commands</h2>
+
+These are the value-added commands, things you simply can't do otherwise in Mineways, such as set how your mouse is mapped (which you may want to do when you start the program, by <a href="#clo">calling a script on startup</a>), set parameters for the estimation of 3D print costs, or temporarily change blocks for the next export done.
+<P>
+Want to turn your stone castle into diamond? Or have all the leaves disappear from your trees? Or add a giant pyramid to your spawn point? The Change blocks command is the genie that can made your dreams come true, if only for a short while.
+<P>
+The idea behind Change blocks is that you can specify extremely temporary changes to your world. These will not show up on the map, and they affect only the next export you perform. After the export the changes are cleared out; you have to load these changes again if you want to apply them again. No actual changes are made to your Minecraft world files.
+<P>
+You can specify a series of commands, which are applied in the order given. Each command works on the results of whatever previous commands did. For example, if you turn all crops into potatoes, then turn potatoes into grass, this has the effect of turning all crops into grass.
+<P>
+<b>One warning:</b> just like a genie fulfilling your wishes, Change blocks commands can set up combinations that can inadvertently cause terrible things to happen, possibly causing assertions during export or even crashes. This is an expert-level feature, and it's up to you to do the right thing.
+<P>
+<TABLE id="scriptOnlyTable" border="1">
+<tr>
+<td WIDTH="50%">
+<B>Script command syntax</B>
+</td>
+<td>
+<B>Notes</B>
+</td>
+</tr>
+
+<tr>
+<td>
+Show informational: <i>true</i><br>
+Show warning: <i>YES</i><br>
+Show error: <i>no</i><br>
+</td>
+<td>
+You can suppress informational, warning, and error pop-up dialog messages by setting the corresponding property to false. By default, all these are set to true. Note that it's usually wise to set these all back to true at the end of any script that turns them off, as these settings are permanent for the session. That is, turn off errors in a script, and all export errors are suppressed from then on, which can be confusing. If suppressed, these messages will instead show up (usually briefly!) in the status line in the lower left of Mineways when exporting. Note that other warnings, such as when you manually turn on some experimental feature, are always displayed and cannot be suppressed.
+</td>
+</tr>
+
+<tr>
+<td>
+Set mouse order: [left|middle|right] [left|middle|right] [left|middle|right]
+</td>
+<td>
+Think of this command as setting the chosen mouse button for movement, bottom height selection, and rectangle selection, respectively, "Select mouse order: <i>movement button</I>, <i>height button</I>, <i>rectangle button</I>", and you specify a mouse button to each in turn.
+By default:
+<UL>
+<LI>The left button moves (pans) the view
+<LI>The middle button down selects the bottom height for export
+<LI>The right button sets or adjusts the selection rectangle's bounds
+</UL>
+So "Set mouse order: middle right left" makes the middle mouse perform movement and the left mouse selection. The mouse wheel (zoom) cannot be remapped.
+</td>
+</tr>
+
+<tr>
+<td>
+Reset mouse
+</td>
+<td>
+Reset the mouse to the default behavior. Equivalent to "Set mouse order: left middle right".
+</td>
+</tr>
+
+<tr>
+<td>
+Change blocks: [from <i>block range</i>] [to <i>type[:id]</i>] [at <i>x,y,z</i> [to <i>x,y,z</i>]]
+</td>
+<td>
+Define a range of block types to be affected, what those block types should turn into, and what location or volume of space the command should affect. Not all from/to/at bits are needed, but at least one is. See the examples below for how the various combinations work. These changes do <i>not</i> happen to your world nor show up on the map, they are applied the next time you export and then cleared out.
+</td>
+</tr>
+
+<tr>
+<td>
+Clear change block commands
+</td>
+<td>
+Clear out all stored 'Change blocks' commands. While exporting will clear out any Change block commands, you can also clear them out this way without exporting.
+</td>
+</tr>
+
+<tr>
+<td>
+Custom printer cost per ccm: <i>0.03</i><br>
+Custom printer cost per printer ccm: <i>0.00</i><br>
+Custom printer handling cost: <i>0.00</i><br>
+Custom printer minimum cost: <i>0.00</i><br>
+Custom printer currency: <i>$</i><br>
+Custom printer maximum size: <i>20.0 20.0 19.0</i><br>
+Custom printer minimum wall thickness: <i>1.5</i><br>
+</td>
+<td>
+The custom printer material that is used by the STL exporter can have its attributes set for showing the cost on export. You can set the cost per cubic centimeter (ccm) of material used (assuming a solid model), the cost per ccm of printer volume used (i.e., including the empty space, a bounding box around the model; Shapeways uses this for its <a href="https://www.shapeways.com/materials/strong-and-flexible-plastic?li=nav">Strong &amp; Flexible</a> material, for example), the "handling" cost (added in), the minimum cost a model will cost, the currency symbol (only the first character is used), the volume size of the 3D printer in centimeters (to warn if the print is too large), and the minimum wall thickness in <b>millimeters</b> for printing. Any or all of these can be set; the defaults are shown when not modified. PLA is typically priced at $24 for a 1 kilogram (800 cubic centimeters) spool. That is, $24/800 ccm then costs $0.03 per cubic centimeter.
+</td>
+</tr>
+
+<tr>
+<td>
+Save log file: <i>filename</i>
+</td>
+<td>
+Instead of displaying script syntax errors, warnings, and completion messages to the screen in a pop-up dialog, append this information to the specified log file. Typically call this at the beginning of a script. The log file is closed when the script is processed. This is handy if you have errors and want to look at them later. That said, I added it mostly for testing errors, as the popup dialog is limited to showing the first 20 errors, while the log file has no limit. Note: only syntax errors in the script commands are saved to the log. Actual execution errors are still popped up. You can hide errors by using the <a href="#soc">"Show error: false"</a> command (but, sorry, these don't get saved to the log - they should, but there you have it, a hole in Mineways' error handling).
+</td>
+</tr>
+
+</TABLE>
+
+
+<h3 id="cbce">Change blocks command examples</h3>
+
+The Change blocks command specifies a set of blocks to turn into a particular block ID and data value in a particular volume of space. It has seven variants, depending on whether you specify the from, to, and at values. Here are examples of each variant.
+
+<P>
+Block names in the examples below are the standard English names seen in the game itself, not the internal "namespaced ID". <a href="https://minecraft.gamepedia.com/Block_of_Diamond#Data_values">For example</a>, it's "block of diamond", not "diamond_block". See the names in <a href="https://github.com/erich666/Mineways/blob/master/Win/blockInfo.cpp#L70">this file</a>. Capitalization is unimportant.
+
+<P>
+<B>IMPORTANT NOTE:</B> This feature uses <a href="https://minecraft.gamepedia.com/Java_Edition_data_value/Pre-flattening#Block_IDs">the old "pre-flattening" type/dataVal format</a> for specifying blocks, which went away in Minecraft 1.13. You can look up the type values <a href="https://minecraft.gamepedia.com/Java_Edition_data_value/Pre-flattening#Block_IDs">here</a> - click the "[show]" link to the right of the "Block IDs" title. Wiser is to use the block names explicitly, as found in <a href="https://github.com/erich666/Mineways/blob/master/Win/blockInfo.cpp#L70">this file</a>. That said, I have shoved many newer 1.13+ blocks in various places, e.g., a warped_slab, blackstone_slab, and other new slabs have the same block ID, 361 (= 256+105), as crimson_slab, with a dataVal of 1, 2, etc. - see that encoded <a href="https://github.com/erich666/Mineways/blob/master/Win/nbt.cpp#L1078">here</a>. As an example, "crimson slab":2 means <a href="https://github.com/erich666/Mineways/blob/master/Win/nbt.cpp#L1079">a blackstone slab</a> (ignore "HIGH_BIT" in the code). I hope this helps.
+
+<P>
+Basically, if you're reading this and are extremely bitter that I don't clearly support some particular block you want and can't figure out how to set it, <a href="contact.html">write me</a> and plead your case. I could probably rework the nbt.cpp code to also use the namespaced ID names.
+
+<P>
+<div id="code">
+Change blocks: from 8-9
+</div>
+<P>
+Block IDs 8 and 9 are the two types of water. These are cleared to "air" in the whole selection volume - the land's dried up.
+<P>
+<div id="code">
+Change blocks: from "wool":5 to "wool":13
+</div>
+<P>
+Change all lime green wool blocks to a deep green wool.
+<P>
+<div id="code">
+Change blocks: to "TNT" at 2112,71,548
+</div>
+<P>
+The specific location, no matter what's in it (even air), is turned into TNT. For the next example below, no "from" means "everything <i>except</i> air". If you can't remember what the default is, just specify it, e.g., this command is the same as Change blocks: from 0-255 to "TNT" at 2112,71,548
+<P>
+<div id="code">
+Change blocks: to 24:1
+</div>
+<P>
+Everything solid (not air) in the whole volume is turned into <a href="http://minecraft.gamepedia.com/Data_values#Sandstone">chiseled sandstone</a>. The long form is Change blocks: from 1-255 to 24:1
+<P>
+<div id="code">
+Change blocks: from "stained glass","glass pane","stained glass pane" to "glass"
+</div>
+<P>
+Any of the given forms of glass are turned into glass blocks in the entire exported volume (defined by "Selection location:"). Note that the "from" range can be a list of blocks by ID number or name. A range can also be given, e.g., 64,71,193-197 specifics all full doors. You can also give specific <a href="http://minecraft.gamepedia.com/Data_values#Data">data values</a>, e.g., "wood planks":1-5 means all variants of wood planks other than oak, which uses <a href="http://minecraft.gamepedia.com/Data_values#Wood_Planks">data value 1</a>.
+<P>
+<div id="code">
+Change blocks: at -5,50,45 to 50,255,90
+</div>
+<P>
+The at/to volume specified is cleared out, turned to air. The long form is Change blocks: from 1-255 to 0 at -5,50,45 to 50,255,90
+<P>
+<div id="code">
+Change blocks: from "wheat" to "cactus" at -5,0,-45 to 50,255,90
+</div>
+<P>
+This example finds any wheat blocks in the given volume and changes them to cactus blocks. The names are those shown in the "Block" column on <a href="http://minecraft.gamepedia.com/Data_values/Block_IDs">this page</a>. Or, find these names and IDs in <a href="https://github.com/erich666/Mineways/blob/master/Win/blockInfo.cpp#L65">this table</a>.
+<P>
+<div id="code">
+Change blocks: from 59 to 81 at -5,0,-45   // wheat to cactus
+</div>
+<P>
+This is the same as say from "wheat" to "cactus", instead using the decimal "Dec" number shown in <a href="http://minecraft.gamepedia.com/Data_values/Block_IDs">this table</a>. If you're not sure of the name, use the ID to be safe - you can always add a comment, as shown. Note how the "at" location specifies only a single block in this example, just to show a different example; if that block is wheat, it will be turned into a cactus.
+<P>
+<div id="code">
+Change blocks: from "wheat":0-6 to "wheat":7 at -5,0,-45 to 50,255,90
+</div>
+<P>
+Here the <a href="http://minecraft.gamepedia.com/Data_values#Data">data values</a> for wheat are specified. The data value is a number from 0 to 15 and specifies variants of blocks. Wheat's values are <a href="http://minecraft.gamepedia.com/Data_values#Crops">0-7</a>, specifying the growth stage, 7 being fully mature. This example says to make all the wheat fully mature, by taking data values 0-6 and changing them all to 7.
+<P>
+<div id="code">
+Change blocks: from "wheat":0-6,141-142,207 to "wheat":7 at -5,0,-45 to 50,255,90
+</div>
+<P>
+Any <a href="http://minecraft.gamepedia.com/Data_values#Crops">growing wheat</a>, carrots (ID 141) through potatoes (ID 142), and beetroot seeds (ID 207) are turned into fully grown wheat in the specified area. This is about as elaborate as you can go. All the commands below are shorthand variants, using defaults for missing fields.
+<P>
+<i>Usually</i> if you don't specify a "from" range, it means everything solid (not air). The one exception is if you set "to" and a volume, in which case air is also turned into the specified block type. The "to" value is "air" by default. If the location volume is not given, the whole export selection area is used.
+<P>
+<div id="code">
+Change blocks: from 198-255 at -319,50,-1077 to -302,50,-1059
+</div>
+<P>
+All blocks greater or equal in <a href="http://minecraft.gamepedia.com/Data_values/Block_IDs">ID</a> to 198 ("end rod") in the given at/to volume are turned into "air", i.e., cleared out. If no "to" ID is given, air is used.
+
+
+<h2 id="c">Comments</h2>
+
+There is no comment syntax for model export files - usually it's better to not mess with these commands at all in the model file. For scripts you can use "//" and anything after is ignored. You can also use "/*" and "*/" to comment out blocks of text.
+<P>
+
+
+<h3 id="ce">Examples</h3>
+
+<div id="code">
+// My little test script<br>
+Set render type: Wavefront OBJ, absolute      // the exact text for the file type is needed here<br>
+// Set 3D Print Type: STL                     // you can have multiple comments<br>
+/* comment out the following commands for now:<br>
+  Create block faces at the borders: no       // or NO, FALSE, false, 0<br>
+  Use biomes: YES                             // or yes, TRUE, true, 1<br>
+*/<br>
+  Make Z the up direction instead of Y: no    /* set to "yes" for STL files */<br>
+Export for Rendering: c:\temp\mysave.obj      // forward slashes in the path specification are also OK
+</div>
+
+
+<h1 id="clo">Command Line Options</h1>
+
+You can use command-line options with Mineways so that it is customized on startup. For example, you could provide a different initial window size, then run a script that loads your favorite world and takes you to where you were last building.
+<P>
+You can <a href="http://www.makeuseof.com/tag/write-simple-batch-bat-file/">store this command line in a .bat file</a> and double-click that file, or <a href="http://windows.tips.net/T010869_Changing_Shortcut_Properties.html">change your options on the shortcut for Mineways itself</a>. See the file <b>mineways.bat</b> in Mineways for an example.
+<P>
+Syntax:
+<P>
+<div id="code">
+mineways.exe [-w X Y] [-m] [-s UserSaveDirectory|none] [-t terrainExtYourfile.png] [-l mineways_exec.log] [-zl #] [file1.mwscript|obj|wrl [file2.mwscript [...]]]
+</div>
+<P>
+The command-line options are:
+<P>
+<i>file1.mwscript|obj|wrl</i><br>
+Specify the file name and path for a script or previously exported model file to load on startup. So, you can use scripting, as above, or you can use the <a href="mineways.html#importsettings">"Import Settings" feature</a>: provide an .obj, .wrl, or .txt (from an .stl export) file from a previous export and it will load the world, take you to the model previously exported, and select it for further work.
+<P>
+-w <i>X Y</i><br>
+Specify the X and Y resolution in pixels of the startup window. Values must be positive integers.
+<P>
+-m<br>
+Start up Mineways as a minimized window. This setting is useful if you are running a command-line script that does a "Close" at the end, as all operations will run without (noticeably) popping up the Mineways window.
+<P>
+-s <i>UserSaveDirectory</i><br>
+Specify the directory where all your Minecraft worlds are located, shown in the "File | Open World" list. This directory is "%appdata%\.minecraft\saves" by default, if not specified. The directory is not a single world's save folder, but rather a directory holding all world folders you want to choose from. If your directory path has spaces in it, you need to use double-quotes around the path, e.g., -s "C:\temp\My Minecraft Saves". Use "-s none" to load no world list at all.
+<P>
+-t <i>terrainExt*.png</i><br>
+Specify the terrain file to use initially. See <a href="mineways.html#texture_output">the documentation</a> for more details on terrain files.
+<P>
+-l <i>mineways_exec.log</i><br>
+For debugging startup problems; you'll normally never use this. This option saves a log of startup and commands executed. The file mineways_debug_log.bat runs Mineways in this way.
+<P>
+-zl <i>MinZoom</i><br>
+Congratulations! You found an experimental feature. <I>Setting this may cause memory problems or crashes on your machine.</I> Normally Mineways has a limit to how far you can zoom out: 1 pixel per block. But, if you set this MinZoom value to something lower than 1.0, that's how low you can zoom out with the mouse wheel. For example, 0.5 means 0.5 pixels per block, aka 1 pixel for every 2 blocks in width on the screen. Lowest you can go is 0.0625 (16 blocks wide per pixel). This zoom level lets you see a lot more of your world in the window. It'll also load a lot more blocks (a LOT more. For example, 0.5 means loading four - 2x2 - more blocks to display. 0.0625 means loading 256 more blocks per pixel than normal). You may experience slowdowns or a crash as you zoom farther out, as more and more chunks get loaded. Have fun! <B>Bonus behavior:</B> if you set this zoom value on startup, you'll have more cache available as you pan around your map. So, for example, you could set "-zl 0.25" and more chunks will be cached overall, leading to less hesitation when you scroll around further. Give it a try if you find you scroll back and forth between areas a lot (or just use View -> Focus View on the menu).
+<P>
+Here are a few examples:
+<P>
+<div id="code">
+mineways.exe -w 800 900
+</div>
+<P>
+Start up Mineways in an 800 x 900 size window. Note that a larger window does mean a slower world load time, since more chunks are visible on load.
+<P>
+<div id="code">
+mineways.exe MyCastle.obj
+</div>
+<P>
+Import the settings for the previously-exported model MyCastle.obj, its rendering mode, selection volume, and all other export settings. Essentially runs the <a href="mineways.html#importsettings">Import Settings function</a> in the File menu.
+<P>
+<div id="code">
+mineways.exe scripting/startup.mwscript
+</div>
+<P>
+Run the script "startup.mwscript" at startup. This file must be in the same directory as Mineways (probably won't work on Mac); give the path if it's somewhere else. 
+<P>
+<div id="code">
+mineways.exe "C:\Mineways\My House.obj" C:\Mineways\modify.mwscript
+</div>
+<P>
+If you exported a model just how you like it, you can import it and modify its settings with whatever commands are in your modify.mwscript. When using multiple scripts, it's wise to give the full path to each file, as Mineways will modify the default directory used to load files. Note that double quotes are needed when the file or path contains a space character, such as shown in this example for "My House.obj".
+<P>
+<div id="code">
+mineways.exe -m "C:\Mineways\Load Eiffel.mwscript" C:\Mineways\export.mwscript C:\Mineways\close.mwscript
+</div>
+<P>
+Start minimized and run the specified scripts at startup. The "Load Eiffel" script might load a world and select the Eiffel model in that world. The export script exports it, and the close script closes Mineways. This allows you to essentially run Mineways from the command line with no interactions needed. Running minimized also speeds up processing, since only the map chunks in the exported model are loaded.
+<div id="code">
+mineways.exe -s C:\MyWorlds
+</div>
+<P>
+Load the world folders contained in C:\MyWorlds so that they appear in the "File | Open World" menu list. If you want to not load any list of worlds, use:
+<div id="code">
+mineways.exe -s none
+</div>
+<P>
+Do not load any list of worlds on startup.
+This can be useful if Mineways does not start properly, to rule out world files causing the problem, or if you're running a script on startup and do not need the world list loaded.
+
+<H1 id="amfwm">Associating .mwscript files with Mineways</H1>
+
+On Windows, run the batch file <b>register-Mineways-run-as-administrator.bat</b> as administrator. Go to the folder where the Mineways code is and right-click on <b>register-Mineways-run-as-administrator.bat</b> and then select "Run as administrator" from the list:
+<P>
+  <div>
+    <img src="images/administrator.jpg" alt="administrator">
+  </div>
+<P>
+You should see any *.mwscript files with Mineways icons next to them:
+  <div>
+    <img src="images/script_files.jpg" alt="script files">
+  </div>
+<P>
+Now when you double-click on a file ending with .mwscript, it will run this script on startup.
+<P>
+On the Mac, follow <a href="http://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/">these instructions</a>.
+
+	
+<h1 id="default">Default Rendering Options</h1>
+
+What follows are the default rendering options when Export for Rendering is performed. This list was created by exporting a sample rendering from a world, editing the OBJ file, grabbing the header and removing the "#" character at the beginning of each line, and commenting out the lines that are purely comments. This is provided here as a guide to all the export options available.
+<P>
+<div id="code">
+// Wavefront OBJ file made by Mineways version 4.18, http://mineways.com<br>
+Minecraft world: Voxelia_2016-01-13<br>
+Terrain file name: terrainExt.png<br>
+Color scheme: Standard<br>
+// Sun Jun 05 08:32:21 2016<br>
+<br>
+Selection location min to max: -97, 71, -26 to -76, 255, -5<br>
+//  Non-empty selection location min to max: -97, 71, -26 to -76, 97, -5<br>
+<br>
+Set render type: Wavefront OBJ absolute indices<br>
+Units for the model vertex data itself: meters<br>
+<br>
+// 6249 vertices, 4998 faces (9996 triangles), 2732 blocks, 245 billboards/bits<br>
+// block dimensions: X=22 by Y=28 (height) by Z=22 blocks<br>
+File type: Export full color texture patterns<br>
+Texture output RGB: YES<br>
+Texture output A: YES<br>
+Texture output RGBA: YES<br>
+Export separate objects: YES<br>
+Individual blocks: no<br>
+ Material per family: YES<br>
+  G3D full material: no<br>
+Make Z the up direction instead of Y: no<br>
+Center model: YES<br>
+Export lesser blocks: YES<br>
+Fatten lesser blocks: no<br>
+Make tree leaves solid: no<br>
+Create block faces at the borders: YES<br>
+Use biomes: no<br>
+Rotate model 0.000000 degrees<br>
+Scale model by making each block 100 mm high<br>
+// Data operation options:<br>
+  Fill air bubbles: no; Seal off entrances: no; Fill in isolated tunnels in base of model: no<br>
+  Connect parts sharing an edge: no; Connect corner tips: no; Weld all shared edges: no<br>
+  Delete floating objects: trees and parts smaller than 16 blocks: no<br>
+  Hollow out bottom of model, making the walls 10 mm thick: no; Superhollow: no<br>
+Melt snow blocks: no<br>
+  Debug: show separate parts as colors: no<br>
+  Debug: show weld blocks in bright colors: no<br>
+</div>
+
+
+<h1 id="pse">Perl Script Example</h1>
+
+Here's a simple Perl script to generate a Mineways script. It shows the power of scripting to make models.
+<P>
+<div id="code">
+$Cobras = 8;<br>
+<br>
+# Block for each cobra.<br>
+@block = ("200","\"tnt\"","\"wood planks\"","\"block of diamond\"","\"wool\":2","20","124","58");<br>
+<br>
+$minlevel = 65;<br>
+$maxlevel = 164;<br>
+$scale = 30;<br>
+$radius = 1;<br>
+<br>
+# Use Block Test World as my canvas - building above about 65 is good<br>
+printf "Minecraft world: [Block Test World]\n";<br>
+printf "Set render type: Wavefront OBJ absolute indices\n";<br>
+printf "selection location: -100,$minlevel,-100 to 100,$maxlevel,100\n";<br>
+for ($level = $minlevel; $level &lt;= $maxlevel; $level++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;$time = 2 * 3.1415926 * ($level-$minlevel)/($maxlevel-$minlevel);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for ($cobra=0; $cobra &lt; $Cobras; $cobra++) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$objOffset = 3.1415926 * ($cobra/$Cobras);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Rotate the object around a center point, depending on the object number itself.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$x = $scale * cos($objOffset) * cos($time+$objOffset);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$z = $scale * sin($objOffset) * cos($time+$objOffset);<br>
+	  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# equivalent: printf "Change blocks: from 0-255 to %s at %d,$level,%d to %d,$level,%d\n",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf "Change blocks: to %s at %d,$level,%d to %d,$level,%d\n",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$block[$cobra],int($x-$radius),int($z-$radius),int($x+$radius),int($z+$radius);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+</div>
+<P>
+Running the script to set up the scene, then exporting (manually) to Sketchfab, you get this:
+<P>
+<iframe width="1280" height="960" src="https://sketchfab.com/models/ba2434c9ab934d8bbae463d09d3f799e/embed"></iframe><p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+    <a href="https://sketchfab.com/models/ba2434c9ab934d8bbae463d09d3f799e?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Scripting test</a>
+    by <a href="https://sketchfab.com/erich?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Eric Haines</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+
+
+    </div> <!-- /content -->
+	<div id="footer">
+		<hr>
+		<p>Webmaster: <a href="mailto:erich@acm.org">Eric Haines</a>, erich@acm.org - visit the <a href="contact.html">support page</a>
+		<br id="lastUpdate">Last updated 11/28/2021</p>	</div>
+</div>
+
+</body>
+</html>
